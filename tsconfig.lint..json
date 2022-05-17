@@ -1,5 +1,5 @@
 {
-    "extends": "@utils/tsconfig",
+    "extends": "@raro/tsconfig",
     "compilerOptions": {
         "outDir": "lib",
         "rootDir": "src"

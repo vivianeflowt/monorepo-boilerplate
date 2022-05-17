@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# export PATH=$PATH:/media/viviane/MYAPPS/gurudavivi/@guru-cli/guru-cli/bin
+
+# node -r esbuild-register ./src/index.ts $@
+
+# CMD='remove -D jest @types/jest ts-jest'
+# CMD='add -D jest@^27.5.1 @types/jest ts-jest@27.0.0'
+# CMD='add -D @commext/tsconfig @commext/eslint-config'
+
+# CMD='add commander lodash chalk@4'
+CMD='remove eslint'
+
+# CMD='remove ts-node typedoc'
+# CMD='exec typesync'
+
+pnpm --filter ./packages/term -r $CMD
+pnpm --filter ./packages/options -r $CMD
+pnpm --filter ./packages/option-parser -r $CMD
+
+
+# pnpm --filter ./packages/term -r --if-present $CMD
+# pnpm --filter ./packages/term -r --if-present $CMD
+# pnpm --filter ./packages/term -r --if-present $CMD
+# pnpm add -w -D jest @types/jest ts-jest @types/node ts-node
+
+# pnpm --filter ./packages -r -p exec pnpm pack  

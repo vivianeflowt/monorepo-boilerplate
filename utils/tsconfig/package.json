@@ -1,24 +1,9 @@
 {
-    "name": "@utils/tsconfig",
-    "description": "typeScript configuration",
-    "version": "0.0.0",
-    "author": "Viviane Florido",
-    "license": "private",
-    "main": "tsconfig.json",
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog"
-        }
-    },
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog"
-        }
-    },
-    "scripts": {
-        "commit": "cz"
-    },
-    "dependencies": {
-        "rimraf": "^3.0.2"
-    }
+  "name": "@utils/tsconfig",
+  "version": "0.0.0",
+  "description": "typescript configuration",
+  "license": "MIT",
+  "private": "true",
+  "author": "Viviane Florido @vivianeflowt",
+  "main": "tsconfig.json"
 }

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# export PATH=$PATH:/media/viviane/MYAPPS/gurudavivi/@guru-cli/guru-cli/bin
-
-# node -r esbuild-register ./src/index.ts $@
-
-node ./dist/cli.js $@
