@@ -1,5 +1,0 @@
-9125bb6b9b6d5d06c3d3be50de375175
-"use strict";
-test('base', () => {
-    expect(true).toEqual(true);
-});
