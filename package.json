@@ -1,0 +1,74 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": "true",
+  "engines": {
+    "node": ">=12.6",
+    "pnpm": ">=6.14.1"
+  },
+  "scripts": {
+    "bootstrap": "ultra -r -w pnpm install",
+    "build": "ultra --recursive --build",
+    "bundle": "ultra --recursive bundle",
+    "clean": "ultra -r -w pnpm exec -- rimraf node_modules; rimraf dist; rimraf lib",
+    "commit": "cz",
+    "depcheck": "ultra -r -w npx depcheck",
+    "fix": "ultra -r -w syncpack format; syncpack fix-mismatches; pnpm run format; pnpm run lint",
+    "format": "ultra -r syncpack format; prettier --write **/src/**/*.ts",
+    "lint": "ultra -r syncpack format; eslint **/src/**/*.ts --fix --quiet",
+    "monitor": "ultra --monitor",
+    "syncpack": "syncpack list-mismatches",
+    "preinstall": "npx only-allow pnpm",
+    "release": "release-it --verbose -c ./utils/release/.release-it.js --dry-run",
+    "reset": "./scripts/reset.sh",
+    "share": "./scripts/share.sh",
+    "test": "pnpm test --recursive --stream --if-present",
+    "typesync": "typesync",
+    "watch:bundle": "pnpm -r --if-present --stream -p run watch:bundle",
+    "watch:dev": "pnpm -r --if-present --stream -p run watch"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write",
+      "syncpack format",
+      "eslint",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "concurrently": "^7.2.0",
+    "ultra": "^0.7.2"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.4.2",
+    "@types/jest": "^27.5.1",
+    "@types/prettier": "^2.6.1",
+    "@types/rimraf": "^3.0.2",
+    "@types/supertest": "^2.0.12",
+    "@utils/eslint-config": "workspace:^0.0.0",
+    "@utils/tsconfig": "workspace:^0.0.0",
+    "@vercel/ncc": "^0.33.4",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "release-it": "^15.0.0",
+    "rimraf": "^3.0.2",
+    "supertest": "^6.2.3",
+    "syncpack": "^7.2.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "typesync": "^0.9.1"
+  }
+}

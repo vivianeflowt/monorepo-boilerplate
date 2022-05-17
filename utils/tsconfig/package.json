@@ -1,0 +1,9 @@
+{
+  "name": "@utils/tsconfig",
+  "version": "0.0.0",
+  "description": "typescript configuration",
+  "license": "MIT",
+  "private": "true",
+  "author": "Viviane Florido @vivianeflowt",
+  "main": "tsconfig.json"
+}

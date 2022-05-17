@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "composite": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "preserveConstEnums": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strict": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "strictPropertyInitialization": false
+    }
+}

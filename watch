@@ -1,0 +1,10 @@
+#!/bin/bash
+
+clear
+
+pnpm --filter @raro/cli exec rm -rf dist
+pnpm --filter @raro/cli run build
+
+pnpm --filter @raro/cli run watch
+# pnpm --filter @raro/cli run bundle:watch
+
