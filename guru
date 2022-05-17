@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# node ./packages/cli/lib/index.js $@
-
-# node ./utils/libmake/lib/index.js $@
-
-node ./packages/options/lib/debug.js $@
