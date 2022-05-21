@@ -1,16 +1,16 @@
 {
     "ignores": [
-        "eslint*",
-        "babel-*",
-        "@commext/eslint-config",
-        "@commext/tsconfig",
         "@types/*",
+        "@utils/eslint-config",
+        "@utils/tsconfig",
+        "@vercel/ncc",
+        "babel-*",
+        "eslint*",
         "jest",
         "prettier",
         "release-it",
         "rimraf",
         "typescript",
-        "@vercel/ncc",
         "tslib"
     ]
 }
